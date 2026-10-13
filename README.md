@@ -11,7 +11,15 @@ A native iOS app for monitoring and controlling a solar inverter directly over l
 
 Both apps implement the same local PI30 functionality and 37-setting map, with platform-specific controls and background behavior. [Download the Android APK](https://github.com/talhabalaj/inverter-link-android/releases/tag/v0.1.0).
 
-Tested against a SolarMax-branded 4 kW / 24 V inverter with an Energy Mate / Eybond Wi-Fi logger using PI30. White-label branding alone does not establish compatibility.
+Tested against a **SolarMax Orion 4 kW / 24 V** inverter with an Energy Mate / Eybond Wi-Fi logger using PI30. White-label branding alone does not establish compatibility.
+
+## Tested inverter
+
+| Inverter | Logger / protocol | Verified on real hardware |
+| --- | --- | --- |
+| **SolarMax Orion 4 kW (24 V)** | Energy Mate / Eybond · PI30 | Monitoring, settings reads and LED color 1 changed to blue with ACK/readback |
+
+Other setting writes and physical iPhone UI behavior remain unverified. Using Energy Mate alone does not establish compatibility with another inverter model.
 
 ## Before using this app
 

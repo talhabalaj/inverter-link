@@ -2,7 +2,7 @@
 
 ## Scope
 
-Version 0.1.0, build 20261013.9. Native iOS app, local PI30 transport and 37 mapped settings. The signed distribution archive excludes the DEBUG-only preview fixture.
+Version 0.1.0, build 20261013.9. Native iOS app, local PI30 transport and 37 mapped settings. Tested hardware: SolarMax Orion 4 kW / 24 V with an Energy Mate / Eybond logger. The signed distribution archive excludes the DEBUG-only preview fixture.
 
 ## Automated checks
 
