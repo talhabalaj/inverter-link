@@ -2,11 +2,11 @@
 
 ## Scope
 
-Version 0.1.0, build 20261013.8. Native iOS app, local PI30 transport and 37 mapped settings. The signed distribution archive excludes the DEBUG-only preview fixture.
+Version 0.1.0, build 20261013.9. Native iOS app, local PI30 transport and 37 mapped settings. The signed distribution archive excludes the DEBUG-only preview fixture.
 
 ## Automated checks
 
-Final Release result: **25 passed, 0 failed, 0 skipped**, with no runtime warnings. The signed Release archive and app/widget version checks passed.
+Build 20261013.8 Release test baseline: **25 passed, 0 failed, 0 skipped**, with no runtime warnings. Build 20261013.9 restores only the color-picker UI; its signed Release archive, app/widget version checks and signatures passed. The full test suite was not repeated for this UI restoration.
 
 25 tests cover CRCs and fixed queries, malformed inputs, fragmentation and pinned reply routing, charging choices and setting command validation, cancellation, real loopback UDP/TCP exchanges, a full mock logger handshake and keepalive, hostname validation, saved-device migration, names and addresses, default/appearance preference persistence, forgetting one device, Live Activity/scene lifecycle and the SwiftUI-hosted 3D rendering regression.
 
@@ -14,7 +14,7 @@ The release test harness uses `ENABLE_TESTABILITY=YES ONLY_ACTIVE_ARCH=YES`; the
 
 ## UI walkthrough
 
-Checked in the iPhone 18 Pro simulator:
+Checked in the iPhone 18 Pro simulator for build 20261013.8:
 
 - Compact Devices list with two root tabs; named device row opens a dashboard without a tab bar.
 - Inverter settings and diagnostics are under the dashboard's Details disclosure.
@@ -30,6 +30,6 @@ These UI checks use a clearly labeled DEBUG fixture with isolated preferences. I
 
 The real inverter supplied PI30 status and settings responses. LED color 1 was set to blue and verified with ACK plus matching QLED readback. Other setting writes are implemented and validated from the documented formats but have not been physically sent. iPhone rendering, physical Local Network permission handling, actual DHCP/DNS changes and every non-LED setting write still require device verification.
 
-A native custom-color service did not open reliably in this simulator runtime. The shipped color editor uses working presets and an exact RGB hex field. No broken custom-color control is exposed.
+Build 20261013.9 restores the native color picker alongside presets and RGB hex input. The simulator previously failed to present Apple’s color-picker service reliably; physical-device presentation remains to be verified.
 
 See README warnings before using the app. Cloud-destination restoration after local takeover remains unverified; background monitoring is constrained by iOS suspension.

@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct InverterSettingsView: View {
     @Environment(\.inverterAccent) private var accent
@@ -195,6 +196,11 @@ private struct SettingEditor: View {
 
     private var colorControls: some View {
         Section {
+            ColorPicker("Color", selection: Binding(
+                get: { SettingsColor.color(draft) ?? .blue },
+                set: { if let hex = SettingsColor.hex($0) { draft = hex } }
+            ), supportsOpacity: false)
+                .accessibilityIdentifier("settingColorPicker")
             RoundedRectangle(cornerRadius: 18).fill(SettingsColor.color(draft) ?? Palette.card)
                 .frame(height: 60).overlay(RoundedRectangle(cornerRadius: 18).stroke(Palette.border))
                 .accessibilityLabel("New color preview").accessibilityValue(draft)
@@ -289,5 +295,11 @@ private enum SettingsColor {
         guard hex.count == 6, let value = UInt32(hex, radix: 16) else { return nil }
         return Color(.sRGB, red: Double((value >> 16) & 255) / 255,
                      green: Double((value >> 8) & 255) / 255, blue: Double(value & 255) / 255, opacity: 1)
+    }
+    static func hex(_ color: Color) -> String? {
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
+        guard UIColor(color).getRed(&red, green: &green, blue: &blue, alpha: &alpha) else { return nil }
+        let components = [red, green, blue].map { Int((min(1, max(0, $0)) * 255).rounded()) }
+        return String(format: "%02X%02X%02X", components[0], components[1], components[2])
     }
 }

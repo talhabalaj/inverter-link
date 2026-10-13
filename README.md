@@ -22,12 +22,12 @@ The settings map is specific to the verified PI30 / 24 V layout. Do not assume i
 
 - **Devices:** Connected, Saved and Discovered devices share one screen. Scan finds local loggers; `+` connects by hostname/private IP. Tap a named device to open its dashboard. Long-press a saved row to rename it, choose it as the default or forget it.
 - **Dashboard:** The interactive solar house, live measurements and the latest reading time. The device dashboard has no tab bar. Expand **Details** for inverter settings, diagnostics and the full measurements. The device menu provides Rename and Disconnect.
-- **Inverter settings:** 37 mapped settings across Output, Battery, General and LED. Native lists, pickers and steppers, color presets and exact RGB hex input. The toolbar's **Review** opens a separate current/new sheet; **Apply change** sends the command and checks the readback. Unchanged and invalid values cannot reach review.
+- **Inverter settings:** 37 mapped settings across Output, Battery, General and LED. Native lists, pickers and steppers, the native color picker, presets and exact RGB hex input. The toolbar's **Review** opens a separate current/new sheet; **Apply change** sends the command and checks the readback. Unchanged and invalid values cannot reach review.
 - **App Settings:** Refresh interval, Live Activity, six persistent accent colors and an optional **Open default inverter** launch preference. The launch shortcut is off by default.
 
 The old single saved-device record migrates into the device library. Saved names, addresses, preferences and default selection stay on the phone. Reconnection checks the logger identity before using a remembered device. Scanning while connected excludes the active logger from discovery probes.
 
-The LED input accepts six-digit RGB hex, for example `0000FF` for blue. Presets and hex input are used instead of a custom-color service that was unreliable in the simulator.
+The LED input accepts six-digit RGB hex, for example `0000FF` for blue. The native color picker, presets and hex field share the same draft value; choosing a color does not send a command until you review and apply it.
 
 ## Build and run
 

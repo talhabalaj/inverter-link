@@ -10,7 +10,7 @@ settings:
     SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
     # Select your own development team in Xcode.
     CODE_SIGN_STYLE: Automatic
-    CURRENT_PROJECT_VERSION: '20261013.8'
+    CURRENT_PROJECT_VERSION: '20261013.9'
     MARKETING_VERSION: '0.1.0'
     TARGETED_DEVICE_FAMILY: '1,2'
 targets:
