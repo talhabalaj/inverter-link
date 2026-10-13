@@ -15,13 +15,17 @@ Tested against a SolarMax-branded 4 kW / 24 V inverter with an Energy Mate / Eyb
 
 ## Before using this app
 
+> [!WARNING]
 > **This app can change real inverter settings.** A confirmed change can affect charging, battery voltage limits, AC output, alarms and recovery behavior immediately. Start with monitoring and diagnostics. Use your inverter and battery manufacturers' specifications when changing settings.
->
+
+> [!WARNING]
 > **Battery settings require particular care.** Incorrect charging, voltage or equalization values can interrupt power or damage a battery. The app validates command formats and documented limits; it cannot determine whether a value is appropriate for your battery or wiring.
->
+
+> [!WARNING]
 > **Local mode may pause Energy Mate cloud reporting.** Discovery and connection ask the logger to send callbacks to the phone on TCP 8899. Automatic restoration of its previous cloud destination has not been verified.
->
-> **The verified logger protocol has no authentication or encryption.** Use a trusted LAN and restrict access at the router/firewall. The app does not add security to the logger's network interface. Do not expose the logger or callback port to the internet.
+
+> [!WARNING]
+> **The verified logger protocol has no authentication or encryption.** Use a trusted LAN and restrict access at the router/firewall. The app does not add security to the logger's network interface. Do not expose the logger or callback port to the internet. Treat devices that can reach the logger as able to control the inverter. **[Read the security setup guide](SECURITY.md) before connecting.**
 
 Only LED color 1 has been physically changed and verified on the tested inverter: blue, an acknowledgement and matching readback. Other setting writes follow the protocol reference and matching Energy Mate command formats, but **have not been exercised on the real inverter**. Firmware may reject them. An acknowledgement without matching readback is reported as an error and is not retried automatically.
 
