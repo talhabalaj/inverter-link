@@ -291,4 +291,3 @@ private enum SettingsColor {
                      green: Double((value >> 8) & 255) / 255, blue: Double(value & 255) / 255, opacity: 1)
     }
 }
-
