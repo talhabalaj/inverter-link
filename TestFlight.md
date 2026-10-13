@@ -1,8 +1,8 @@
 # TestFlight
 
-**0.1.0 (20261013.9) is available** in the existing **Private Beta** group. Apple processing is `VALID`, the build is `IN_BETA_TESTING`, and the release notes and one existing personal tester were read back and verified. Upload errors and warnings are empty.
+**0.1.0 (20261013.9)** was verified in the existing private beta on 2026-10-13. Apple processing was `VALID`, the build was `IN_BETA_TESTING`, and upload errors and warnings were empty.
 
-Open TestFlight on your iPhone and update **Inverter Link**. [Manage the build in App Store Connect](https://developer.apple.com/testflight/).
+Existing invited testers can open TestFlight on their iPhone and update **Inverter Link**. Publishing this source repository does not create a public TestFlight invitation or App Store listing.
 
 ## This update
 
@@ -12,6 +12,6 @@ The signed Release archive built successfully, app/widget versions match and arc
 
 **Read the [README warnings](README.md#before-using-this-app) before changing settings.** LED color 1 was physically set to blue with acknowledgement and matching readback. Other writes follow the protocol reference and matching Energy Mate formats but have not been exercised on the actual inverter. Battery values must follow manufacturer specifications. Local mode may pause Energy Mate cloud reporting.
 
-Uploaded using `xcodebuild -exportArchive` and the existing Apple account. No API key was created. The build was assigned to the existing personal group, with no new testers added. No public App Store release was submitted.
+Uploaded using `xcodebuild -exportArchive`. No public App Store release was submitted.
 
 Verified at 2026-10-13T11:26:39Z. The local status snapshot is `testflight-status.json` (ignored by Git); release logs and the signed archive stay outside the source repository.

@@ -2,6 +2,15 @@
 
 A native iOS app for monitoring and controlling a solar inverter directly over local Wi-Fi. Built with SwiftUI, RealityKit and WidgetKit, with no third-party app dependencies or cloud account.
 
+## Companion apps
+
+| Platform | Repository | Native UI |
+| --- | --- | --- |
+| iOS | [Inverter Link](https://github.com/talhabalaj/inverter-link) | SwiftUI / RealityKit |
+| Android | [Inverter Link for Android](https://github.com/talhabalaj/inverter-link-android) | Jetpack Compose / Material 3 Expressive |
+
+Both apps implement the same local PI30 functionality and 37-setting map, with platform-specific controls and background behavior. [Download the Android APK](https://github.com/talhabalaj/inverter-link-android/releases/tag/v0.1.0).
+
 Tested against a SolarMax-branded 4 kW / 24 V inverter with an Energy Mate / Eybond Wi-Fi logger using PI30. White-label branding alone does not establish compatibility.
 
 ## Before using this app

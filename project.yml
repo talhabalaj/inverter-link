@@ -8,7 +8,6 @@ settings:
     SWIFT_VERSION: '6.0'
     SWIFT_APPROACHABLE_CONCURRENCY: YES
     SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
-    # Select your own development team in Xcode.
     CODE_SIGN_STYLE: Automatic
     CURRENT_PROJECT_VERSION: '20261013.9'
     MARKETING_VERSION: '0.1.0'
