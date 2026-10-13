@@ -1,0 +1,14 @@
+*.xcodeproj/
+DerivedData/
+*.xcresult/
+*.xcarchive/
+*.ipa
+*.xcuserstate
+xcuserdata/
+.DS_Store
+.env
+.env.*
+*.p8
+*.p12
+*.mobileprovision
+testflight-status.json
