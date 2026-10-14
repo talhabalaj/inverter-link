@@ -13,11 +13,12 @@ Both apps implement the same local PI30 functionality and 37-setting map, with p
 
 Tested against a **SolarMax Orion 4 kW / 24 V** inverter with an Energy Mate / Eybond Wi-Fi logger using PI30. White-label branding alone does not establish compatibility.
 
-## Tested inverter
+## Inverter compatibility
 
 | Inverter | Logger / protocol | Verified on real hardware |
 | --- | --- | --- |
 | **SolarMax Orion 4 kW (24 V)** | Energy Mate / Eybond · PI30 | Monitoring, settings reads and LED color 1 changed to blue with ACK/readback |
+| **[MAXPOWER PV Tech 9000 (6 kW / 48 V)](https://maxpower.com.pk/product/pv-tech-9000/)** | Energy Mate, user-reported | One Android installation rejects QPI; this model is not validated on either platform |
 
 Other setting writes and physical iPhone UI behavior remain unverified. Using Energy Mate alone does not establish compatibility with another inverter model.
 
